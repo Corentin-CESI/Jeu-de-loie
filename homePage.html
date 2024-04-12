@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homePage.css">
+    <script type="text/javascript" src="homePage.js"></script>
+    <title>Jeu de l'oie</title>
+</head>
+<body onload="onload()">
+    <header>
+        <div id="title" class="titleDiv">JEU 2 L'OIE</div>
+        <div id="title_blank" class="titleDiv">
+            <div id="title_black_border" class="titleDiv">
+                <div>
+                    <button id="newGame" class="buttonElement" type="button" onclick="newGame()">NOUVELLE PARTIE</button>
+                </div>
+                <div class="printText">
+                    <p>Nombre de joueur</p>
+                </div>
+                <div>
+                    <input type="number" id="numberOfPlayer" />
+                </div>
+                <div>
+                    <button id="validate" class="buttonElement" type="button" onclick="validate()">VALIDER</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="gameInteraction">
+        <div id="divPlateau" class="plateauDiv">
+            <table border='1' id="plateau" class="plateauDiv">
+                <tbody>
+                    <tr>
+                        <td id="case1">
+                            <p>1</p>
+                        </td>
+                        <td id="case28">
+                            <p>28</p>
+                        </td>
+                        <td id="case27">
+                            <p>27</p>
+                        </td>
+                        <td id="case26">
+                            <p>26</p>
+                        </td>
+                        <td id="case25">
+                            <p>25</p>
+                        </td>
+                        <td id="case24">
+                            <p>24</p>
+                        </td>
+                        <td id="case23">
+                            <p>23</p>
+                        </td>
+                        <td id="case22">
+                            <p>22</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="case2">
+                            <p>2</p>
+                        </td>
+                        <td id="case29">
+                            <p>29</p>
+                        </td>
+                        <td id="case48">
+                            <p>48</p>
+                        </td>
+                        <td id="case47">
+                            <p>47</p>
+                        </td>
+                        <td id="case46">
+                            <p>46</p>
+                        </td>
+                        <td id="case45">
+                            <p>45</p>
+                        </td>
+                        <td id="case44">
+                            <p>44</p>
+                        </td>
+                        <td id="case21">
+                            <p>21</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="case3">
+                            <p>3</p>
+                        </td>
+                        <td id="case30">
+                            <p>30</p>
+                        </td>
+                        <td id="case49">
+                            <p>49</p>
+                        </td>
+                        <td id="case60">
+                            <p>60</p>
+                        </td>
+                        <td id="case59">
+                            <p>59</p>
+                        </td>
+                        <td id="case58">
+                            <p>58</p>
+                        </td>
+                        <td id="case43">
+                            <p>43</p>
+                        </td>
+                        <td id="case20">
+                            <p>20</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="case4">
+                            <p>4</p>
+                        </td>
+                        <td id="case31">
+                            <p>31</p>
+                        </td>
+                        <td id="case50">
+                            <p>50</p>
+                        </td>
+                        <td id="case61">
+                            <p>61</p>
+                        </td>
+                        <td id="case64">
+                            <p>64</p>
+                        </td>
+                        <td id="case57">
+                            <p>57</p>
+                        </td>
+                        <td id="case42">
+                            <p>42</p>
+                        </td>
+                        <td id="case19">
+                            <p>19</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="case5">
+                            <p>5</p>
+                        </td>
+                        <td id="case32">
+                            <p>32</p>
+                        </td>
+                        <td id="case51">
+                            <p>51</p>
+                        </td>
+                        <td id="case62">
+                            <p>62</p>
+                        </td>
+                        <td id="case63">
+                            <p>63</p>
+                        </td>
+                        <td id="case56">
+                            <p>56</p>
+                        </td>
+                        <td id="case41">
+                            <p>41</p>
+                        </td>
+                        <td id="case18">
+                            <p>18</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="case6">
+                            <p>6</p>
+                        </td>
+                        <td id="case33">
+                            <p>33</p>
+                        </td>
+                        <td id="case52">
+                            <p>52</p>
+                        </td>
+                        <td id="case53">
+                            <p>53</p>
+                        </td>
+                        <td id="case54">
+                            <p>54</p>
+                        </td>
+                        <td id="case55">
+                            <p>55</p>
+                        </td>
+                        <td id="case40">
+                            <p>40</p>
+                        </td>
+                        <td id="case17">
+                            <p>17</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="case7">
+                            <p>7</p>
+                        </td>
+                        <td id="case34">
+                            <p>34</p>
+                        </td>
+                        <td id="case35">
+                            <p>35</p>
+                        </td>
+                        <td id="case36">
+                            <p>36</p>
+                        </td>
+                        <td id="case37">
+                            <p>37</p>
+                        </td>
+                        <td id="case38">
+                            <p>38</p>
+                        </td>
+                        <td id="case39">
+                            <p>39</p>
+                        </td>
+                        <td id="case16">
+                            <p>16</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="case8">
+                            <p>8</p>
+                        </td>
+                        <td id="case9">
+                            <p>9</p>
+                        </td>
+                        <td id="case10">
+                            <p>10</p>
+                        </td>
+                        <td id="case11">
+                            <p>11</p>
+                        </td>
+                        <td id="case12">
+                            <p>12</p>
+                        </td>
+                        <td id="case13">
+                            <p>13</p>
+                        </td>
+                        <td id="case14">
+                            <p>14</p>
+                        </td>
+                        <td id="case15">
+                            <p>15</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="interactionJeu" class="interactJeuDiv">
+            <div class="printText">
+                <p id="textPlayer"></p>
+            </div>
+            <div>
+                <img id="dicePict" src="dice.jpg" width="50" height="60">
+                <button id="runDice" class="buttonElement" type="button" onclick="play()">LANCER LES DES</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
